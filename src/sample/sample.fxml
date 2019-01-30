@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="859.0" prefWidth="725.0" style="-fx-background-color: #696f86;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Pane layoutY="-1.0" prefHeight="57.0" prefWidth="725.0" style="-fx-background-color: #172c49;">
+         <children>
+            <Label alignment="CENTER" layoutX="279.0" layoutY="7.0" prefHeight="42.0" prefWidth="168.0" text="ALARMS !" textAlignment="CENTER" textFill="#f50000">
+               <font>
+                  <Font name="Monospaced Regular" size="34.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutY="56.0" prefHeight="505.0" prefWidth="725.0" style="-fx-background-color: #696f86;">
+         <children>
+            <TextArea fx:id="c2cAlarm1" layoutX="15.0" layoutY="56.0" prefHeight="298.0" prefWidth="687.0" style="-fx-border-color: #0d1d28; -fx-background-color: red; -fx-control-inner-background: red; -fx-border-radius: 2;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow height="11.9" offsetX="10.0" offsetY="2.0" radius="0.00" width="57.43" />
+               </effect></TextArea>
+            <Button fx:id="ack01" layoutX="15.0" layoutY="379.0" mnemonicParsing="false" onAction="#AckAlarms" prefHeight="57.0" prefWidth="687.0" style="-fx-background-color: linear-gradient(#021d28, #ebf6ff, #e8ffd1, #e8ffd1, #e8ffd1, #e8ffd1, #e8ffd1, #e8ffd1, #e8ffd1, #021d28); -fx-background-radius: 5 5 5 5;" text="Ack All Alarms" textFill="#303c24">
+               <font>
+                  <Font size="22.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow height="0.0" offsetX="10.0" offsetY="2.0" radius="16.8925" width="69.57" />
+               </effect>
+            </Button>
+            <Hyperlink fx:id="scene2link" layoutX="619.0" layoutY="458.0" onAction="#chaneSceneNow" text="View All">
+               <font>
+                  <Font name="Monospaced Regular" size="15.0" />
+               </font>
+            </Hyperlink>
+            <TextField fx:id="satid" alignment="CENTER" layoutX="638.0" layoutY="14.0" prefHeight="32.0" prefWidth="64.0" promptText="SAT">
+               <font>
+                  <Font name="Monospaced Regular" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </TextField>
+            <Button fx:id="refresh01" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#ShowAlarms" style="-fx-background-color: linear-gradient(#021d28, #ebf6ff);; -fx-effect: dropshadow(two-pass-box , darkgray, 10, 0.0 , 4, 5); -fx-background-radius: 10 10 10 10;" text="Refresh" textFill="#d4e8b9">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="-2.0" layoutY="560.0" prefHeight="298.0" prefWidth="725.0">
+         <children>
+            <ListView fx:id="listTable01" disable="true" layoutX="16.0" layoutY="14.0" prefHeight="230.0" prefWidth="14.0" visible="false" />
+            <TableView fx:id="table01" editable="true" layoutX="15.0" layoutY="14.0" prefHeight="230.0" prefWidth="687.0" style="-fx-background-color: red; -fx-border-color: black;">
+              <columns>
+                <TableColumn fx:id="tCol01" prefWidth="481.0" />
+                <TableColumn fx:id="tCol02" minWidth="0.0" prefWidth="158.0" />
+              </columns>
+               <effect>
+                  <DropShadow height="1.11" offsetX="2.0" offsetY="2.0" radius="40.6525" width="63.5" />
+               </effect>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

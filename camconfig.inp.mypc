@@ -1,0 +1,8 @@
+ExecuteForCam /home/ravi/arcchk.sh
+c2c /moxscnfs/oa/log/64/schemacs/C2C/cam/
+c2d /moxscnfs/oa/log/64/schemacs/C2D/cam/
+c2e /moxscnfs/oa/log/64/schemacs/C2E/cam/
+c2f /moxscnfs/oa/log/64/schemacs/C2F/cam/
+hy1 /moxscnfs/oa/log/64/schemacs/HY1/cam/
+c2b /oa/log/nfs/64/schemacs/C2B/cam/
+c2a /oa/log/nfs/64/schemacs/C2A/cam/

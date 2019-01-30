@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1149.0" prefWidth="1435.0" style="-fx-background-color: #696f86;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AllCams">
+   <children>
+      <AnchorPane prefHeight="65.0" prefWidth="1435.0" style="-fx-background-color: #172c49;">
+         <children>
+            <Label layoutX="616.0" layoutY="11.0" prefHeight="42.0" prefWidth="168.0" text="ALARMS !" textAlignment="CENTER" textFill="#f50000">
+               <font>
+                  <Font name="Monospaced Regular" size="34.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="65.0" prefHeight="965.0" prefWidth="1400.0">
+         <children>
+            <Button fx:id="refresh01" layoutX="1300.0" layoutY="4.0" mnemonicParsing="false" onAction="#ShowAlarms" style="-fx-background-color: linear-gradient(#021d28, #ebf6ff);; -fx-effect: dropshadow(two-pass-box , darkgray, 10, 0.0 , 4, 5); -fx-background-radius: 10 10 10 10;" text="Refresh" textFill="#d4e8b9">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <TextArea fx:id="c2cAlarm1" layoutX="14.0" layoutY="44.0" prefHeight="298.0" prefWidth="687.0" style="-fx-border-color: #0d1d28; -fx-background-color: red; -fx-control-inner-background: red; -fx-border-radius: 10;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextArea>
+            <TextArea fx:id="c2cAlarm11" layoutX="723.0" layoutY="44.0" prefHeight="298.0" prefWidth="687.0" style="-fx-border-color: #0d1d28; -fx-background-color: red; -fx-control-inner-background: red; -fx-border-radius: 10;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextArea>
+            <TextArea fx:id="c2cAlarm12" layoutX="14.0" layoutY="359.0" prefHeight="298.0" prefWidth="687.0" style="-fx-border-color: #0d1d28; -fx-background-color: red; -fx-control-inner-background: red; -fx-border-radius: 10;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextArea>
+            <TextArea fx:id="c2cAlarm13" layoutX="723.0" layoutY="359.0" prefHeight="298.0" prefWidth="687.0" style="-fx-border-color: #0d1d28; -fx-background-color: red; -fx-control-inner-background: red; -fx-border-radius: 10;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextArea>
+            <TextArea fx:id="c2cAlarm14" layoutX="14.0" layoutY="674.0" prefHeight="298.0" prefWidth="687.0" style="-fx-border-color: #0d1d28; -fx-background-color: red; -fx-control-inner-background: red; -fx-border-radius: 10;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextArea>
+            <TextArea fx:id="c2cAlarm15" layoutX="723.0" layoutY="674.0" prefHeight="298.0" prefWidth="687.0" style="-fx-border-color: #0d1d28; -fx-background-color: red; -fx-control-inner-background: red; -fx-border-radius: 10;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextArea>
+         </children>
+      </AnchorPane>
+      <Pane layoutY="1030.0" prefHeight="104.0" prefWidth="1400.0">
+         <children>
+            <Hyperlink fx:id="scene1link" layoutX="14.0" layoutY="81.0" onAction="#switch2Scene1" text="Go to Main" textFill="#eeffe0">
+               <font>
+                  <Font name="Monospaced Regular" size="16.0" />
+               </font>
+            </Hyperlink>
+            <Button fx:id="ack01" layoutX="15.0" layoutY="23.0" mnemonicParsing="false" onAction="#AckAlarms" prefHeight="55.0" prefWidth="1393.0" style="-fx-background-color: linear-gradient(#021d28, #ebf6ff, #e8ffd1, #e8ffd1, #e8ffd1, #e8ffd1, #e8ffd1, #e8ffd1, #e8ffd1, #021d28); -fx-effect: dropshadow(two-pass-box , darkgray, 10, 0.0 , 4, 5); -fx-background-radius: 5 5 5 5;" text="Ack All Alarms" textFill="#303c24">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
