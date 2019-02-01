@@ -1,5 +1,6 @@
 package sample;
 
+import com.sun.org.apache.regexp.internal.REDebugCompiler;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -10,7 +11,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.Background;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javafx.util.Callback;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -60,6 +64,11 @@ public class Controller {
     @FXML
     private TableColumn<Alarms, String> tCol02;
 
+    @FXML
+    private TableColumn<Alarms, String> tCol03;
+
+    @FXML
+    private ToggleButton tg01;
 
     @FXML
     void AckAlarms(ActionEvent event) {
@@ -192,18 +201,40 @@ public class Controller {
             observableList.addAll(arl01);
             listTable01.setItems(observableList);
 
-            tCol01 = new TableColumn("AlarmS");
-            tCol01.setMinWidth(481);
-            tCol01.setCellValueFactory(new PropertyValueFactory<>("alrms"));
+            tCol01 = new TableColumn("Time");
+            tCol01.setMinWidth(170);
+            tCol01.setCellValueFactory(new PropertyValueFactory<>("timeStamp"));
+            /*tCol01.setCellFactory(new Callback<TableColumn<Alarms, String>, TableCell<Alarms, String>>() {
+                @Override
+                public TableCell<Alarms, String> call(TableColumn<Alarms, String> param) {
+                    return new TableCell<Alarms, String>() {
+                        @Override
+                        public  void updateItem(String item, boolean empty) {
+                            super.updateItem(item,empty);
+                            if (!isEmpty()) {
+                                this.setTextFill(Color.RED);
+                                this.applyCss();
+                                if (item.contains(" "))
+                                    this.setTextFill(Color.BLUEVIOLET);
+                                setText(item);
+                            }
+                        }
+                    };
+                }
+            });*/
 
-            tCol02 = new TableColumn("Reps");
-            tCol02.setMinWidth(158);
-            tCol02.setCellValueFactory(new PropertyValueFactory<>("repetition"));
+            tCol02 = new TableColumn("Alarms !");
+            tCol02.setMinWidth(350);
+            tCol02.setCellValueFactory(new PropertyValueFactory<>("alrms"));
+
+            tCol03 = new TableColumn("Reps");
+            tCol03.setMinWidth(90);
+            tCol03.setCellValueFactory(new PropertyValueFactory<>("repetition"));
 
             //table01 = new TableView<>();
             table01.setItems(getAlarms());
             //table01.getColumns().setAll(tCol01);
-            table01.getColumns().setAll(tCol01,tCol02);
+            table01.getColumns().setAll(tCol01,tCol02,tCol03);
 
             table01.getSelectionModel().selectedIndexProperty().addListener(observable -> System.out.printf("Indice sélectionné: %d", table01.getSelectionModel().getSelectedIndex()).println());
             System.out.println("Hello");
@@ -231,7 +262,7 @@ public class Controller {
         String line,line2, sp2[];
         sp2 = str.split(" ");
         String sat=sp2[0];
-        String textAlarm, textAlarm2="random";
+        String textAlarm, textAlarm2="random",alarmTime, alarmTime2;
         int rptCnt, cnt=-1, newValCntr;
         try {
             BufferedReader br = Files.newBufferedReader(Paths.get("logtest_sorted."+sat));
@@ -254,19 +285,27 @@ public class Controller {
                             System.out.println();
                             rptCnt=0;
                             if (newValCntr==1) {
+                                alarmTime2="";
                                 BufferedReader br2 = Files.newBufferedReader(Paths.get("logtest."+sat));
                                 while ((line2 = br2.readLine()) != null && textAlarm2.length()>2) {
+                                    split_01_Inside = line2.split(" ");
+                                    alarmTime="";
                                     if (line2.contains(textAlarm2.substring(1, textAlarm2.length() - 1))) {
                                         //System.out.println(line2);
                                         rptCnt = rptCnt + 1;
-                                    }
+                                        for (int a1 = 0; a1 < 2; a1++) {
+                                        alarmTime = alarmTime + split_01_Inside[a1] + " ";
+                                        }
+                                        alarmTime2=alarmTime;
+                                    }//System.out.println(alarmTime);
                                 }
                                     cnt=rptCnt;
                                         if (rptCnt==cnt) {
-                                            alarms1.add(new Alarms(textAlarm,cnt));
+                                            alarms1.add(new Alarms(alarmTime2,textAlarm,cnt));
                                             System.out.println("Repeated:"+rptCnt+" " + textAlarm + " " + textAlarm.length());
                                         }
                                 System.out.println(textAlarm+": "+cnt+" times");
+                                //}
                             }
                             //---------------------
                         }

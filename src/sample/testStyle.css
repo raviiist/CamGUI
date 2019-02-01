@@ -1,0 +1,288 @@
+.root {
+    /*-fx-background-image: url("background.jpg"); */
+	/*-fx-background-color: #00223b; */
+	/*-fx-background-color: #0d1d28;*/
+}
+/* https://icons8.com/icon/set/pokemon/all                          for icons */
+.button {
+    /*-fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-background-color: linear-gradient(#61a2b1, #2A5058);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );*/
+    /* ================ Now Another Style ============*/
+    /*-fx-effect: dropshadow(two-pass-box , darkgray, 10, 0.0 , 4, 5);*/
+    -fx-background-color: linear-gradient(#021d28, #ebf6ff);
+    /*-fx-background-color: rgba(205,205,205,0.7); */
+    /*-fx-background-color: linear-gradient(#74787c, #ebf6ff); */
+    /*-fx-background-color: linear-gradient(#9ca1a4, #ebf6ff);*/
+    -fx-effect: dropshadow(two-pass-box , darkgray, 10, 0.0 , 4, 5);
+    -fx-background-radius: 10 10 10 10;
+    /*-fx-background-insets: 2 2 2 2 ;*/
+}
+/*.menu-button {
+    -fx-effect: dropshadow(two-pass-box , darkgray, 10, 0.0 , 4, 5);
+    -fx-background-color: linear-gradient(#9ca1a4, #ebf6ff);
+    -fx-background-radius: 15 15 15 15;
+    -fx-background-insets: 2 2 2 2 ;
+} */
+/*.check-box {
+    -fx-effect: dropshadow(two-pass-box , darkgray, 10, 0.0 , 4, 5);
+    -fx-background-color: linear-gradient(#9ca1a4, #ebf6ff);
+    -fx-background-radius: 15 15 15 15;
+    -fx-background-insets: 2 2 2 2 ;
+} */
+/*.combo-box {
+    -fx-effect: dropshadow(two-pass-box , darkgray, 10, 0.0 , 4, 5);
+    -fx-background-color: linear-gradient(#9ca1a4, #ebf6ff);
+    -fx-background-radius: 15 15 15 15;
+    -fx-background-insets: 2 2 2 2 ;
+    -fx-font-family: Gill-Sans-MT;
+    -fx-font-size: 16px;
+    -fx-text-fill: #0462ae;
+}*/
+/*.button:hover {
+    -fx-background-color: linear-gradient(#2A5058, #61a2b1);
+}*/
+.button:pressed, .button:default:hover:pressed {
+	-fx-background-color: rgba(180,180,180,0.55); 
+	/*-fx-text-fill: #1d1d1d;*/
+}
+
+.button:hover{
+    /*-fx-background-color: rgba(235,235,235,0.5); */
+    -fx-background-color: linear-gradient(#ebf6ff, #9ca1a4);
+    /*-fx-background-color: rgba(180,180,180,0.55); */
+}
+
+
+/*
+.button:focused{
+    -fx-background-color: rgba(205,205,205,0.3);
+
+} */
+
+.button:default:hover {
+    -fx-background-color: derive(-fx-focus-color,30%);
+}
+/*.label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+.UT-label {
+    -fx-font-size: 36px;
+    -fx-font-family: "Arial Black";
+    -fx-fill: #818181;
+    -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+}*/
+
+.table-view{
+   /*-fx-background-color: transparent;*/
+}
+
+.table-view:focused{
+    -fx-background-color: transparent;
+}
+/*.table-view .column-header-background{
+    *//*-fx-background-color: linear-gradient(#131313 0%, #424141 100%);*//*
+    -fx-background-color: #ebf6ff;
+}*/
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: red;
+}
+.table-view .column-header {
+    -fx-background-color: #172c49;
+}
+.table-view .table-cell{
+    /*-fx-background-color: red;*/
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+.table-row-cell{
+    /*-fx-background-color: -fx-table-cell-border-color, #616161;*/
+    -fx-background-color: red;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.05em; /* 0 */
+}
+/*.table-row-cell:odd{
+    *//*-fx-background-color: -fx-table-cell-border-color, #454545;*//*
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.1em; *//* 0 *//*
+}*/
+
+.table-row-cell:selected {
+    /*-fx-background-color: #005797;*/
+    -fx-background-color: cadetblue;
+    -fx-background-insets: 4;
+    -fx-background-radius: 2;
+}
+
+.table-view > .virtual-flow > .scroll-bar:vertical,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track-background,
+.table-view > .virtual-flow > .scroll-bar:horizontal,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track-background {
+    -fx-background-color: transparent;
+}
+
+/*
+.table-view > .virtual-flow > .scroll-bar > .increment-button,
+.table-view > .virtual-flow > .scroll-bar > .decrement-button {
+    -fx-opacity: 0;
+}*
+*/
+
+.text-area {
+  /*-fx-font-family: Consolas;*/
+  /*-fx-highlight-fill: #00ff00;*/
+  -fx-highlight-fill: #e8ffd1;
+  -fx-highlight-text-fill: #000000;
+  -fx-text-fill: white;
+  -fx-background-color: #000000;
+  -fx-display-caret:true;
+/*  -fx-focus-color: transparent;*/
+/*  -fx-border-style: none;*/
+/*  -fx-background-radius: 0.0px;*/
+/*  -fx-border-radius: 0.0px;*/
+
+}
+  .text-area .content{
+      -fx-background-color: red;
+  }
+  .text-area:focused .content {
+    /*-fx-background-color:  red;*/
+  }
+
+/*.toggle-button {
+    -fx-text-fill: white;
+    -fx-base: transparent;
+    -fx-background: transparent;
+    -fx-background-color: linear-gradient(#021d28, #ebf6ff);
+    -fx-focus-color: transparent;
+    -fx-border-color: transparent;
+    -fx-effect: dropshadow(two-pass-box , darkgray, 10, 0.0 , 4, 5);
+    -fx-background-radius: 0 0 0 0;
+}
+
+.toggle-button:selected {
+    -fx-text-fill: white;
+    -fx-base: transparent;
+    *//*-fx-background: transparent;*//*
+    -fx-background-color: linear-gradient(#ebf6ff, #021d28);
+    -fx-focus-color: transparent;
+    -fx-border-color: transparent;
+    -fx-effect: dropshadow(two-pass-box , darkgray, 10, 0.0 , 4, 5);
+    -fx-background-radius: 0 0 0 0;
+    *//*-fx-effect: null;*//*
+}*/
+/*--------   Options for toggle button below---------------*/
+/*.toggle-button {
+    -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border,
+        -fx-inner-border, -fx-body-color;
+    -fx-text-fill: -fx-text-base-color;
+}
+.toggle-button:selected {
+    -fx-background-color: -fx-shadow-highlight-color,
+        linear-gradient(to bottom, derive(-fx-outer-border, -20%), ...),
+        linear-gradient(to bottom, derive(-fx-color, -22%) 0%, ...);
+}
+.toggle-button:selected:focused {
+    -fx-background-color: -fx-focus-color,
+        linear-gradient(to bottom, derive(-fx-color, -22%) 0%, ...),
+        -fx-faint-focus-color, linear-gradient(to bottom, derive(-fx-color, -22%) 0%, ...);
+}*/
+/*--------   Options for toggle button below---------------*/
+.toggle-button {
+    /*OSX Lion*/
+    -fx-background-color:
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    /*-fx-font-family: "Arial";*/
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 13px;
+    -fx-padding: 10 11 10 11;
+    /*------------------*/
+    /*Windows7 Default*/
+/*    -fx-background-color:
+        #3c7fb1,
+        linear-gradient(#fafdfe, #e8f5fc),
+        linear-gradient(#eaf6fd 0%, #d9f0fc 49%, #bee6fd 50%, #a7d9f5 100%);
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 3,2,1;
+    -fx-padding: 3 11 3 11;
+    -fx-text-fill: black;
+    -fx-font-size: 14px;*/
+    /*-----------------*/
+}
+.toggle-button:selected {
+    -fx-background-color:
+        #090a0c,
+        linear-gradient(#191d22 100%, #38424b 0%, #1f2429 20%),
+        linear-gradient(#191d22, #20262b),
+        radial-gradient(center 50% 100%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 5,4,3,5;
+    /*-fx-background-radius: 1,2,1,2;*/
+    /*-fx-background-insets: 0,1,2,0;*/
+    -fx-background-insets: 1,0,0,2;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    /*-fx-font-family: "Arial";*/
+    /*-fx-text-fill: linear-gradient(#d0d0d0,red);*/
+    -fx-text-fill: #71d1e7;
+    -fx-font-size: 13px;
+    -fx-padding: 10 11 10 11;
+}
+
+
+
+/*  .text-area .scroll-pane{
+  -fx-background-color: transparent;
+  }*/
+
+/*.text-area > .virtual-flow > .scroll-bar:vertical,
+.text-area > .virtual-flow > .scroll-bar:vertical > .track,
+.text-area > .virtual-flow > .scroll-bar:vertical > .track-background,
+.text-area > .virtual-flow > .scroll-bar:horizontal,
+.text-area > .virtual-flow > .scroll-bar:horizontal > .track,
+.text-area > .virtual-flow > .scroll-bar:horizontal > .track-background {
+    -fx-background-color: transparent;
+}*/
+
+/*
+.dialog > .dialog-pane {
+    -fx-background-color: greenyellow;
+}
+
+.dialog > .dialog-pane > .button-bar {
+    -fx-font-size: 24px;
+    -fx-background-color: indianred;
+    -fx-font-family: "Andalus";
+}
+
+.dialog > .dialog-pane > .content.label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold; 
+    -fx-fill: blue;
+}
+
+.dialog:header > .dialog-pane .header-panel {
+    -fx-background-color: cadetblue;
+    -fx-font-style: italic;
+}
+
+.alert.confirmation.dialog-pane {
+    -fx-graphic: url("lock24.png");
+}	*/
+
+
